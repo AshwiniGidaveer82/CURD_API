@@ -1,9 +1,18 @@
 # 📘 Book CRUD Microservice (FastAPI + Docker)
 
+---
+
 ## 📌 Project Overview
 
-This project is a CRUD (Create, Read, Update, Delete) Microservice built using **FastAPI** and containerized using **Docker**.
-It provides REST APIs to manage Book records and is fully configurable using environment variables.
+This project is a **CRUD (Create, Read, Update, Delete) Microservice** built using **FastAPI** and containerized using **Docker**.
+
+It provides REST APIs to manage Book records and includes:
+
+✔ REST API implementation
+✔ Swagger UI documentation
+✔ Docker containerization
+✔ Docker Hub image push
+✔ GitHub repository integration
 
 ---
 
@@ -78,16 +87,16 @@ http://localhost:8000/docs
 (Execute from project root where Dockerfile exists)
 
 ```
-docker build -t aswininigidaveer/book-crud-api:1.0 .
+docker build -t aswininigidaaveer/book-crud-api:1.0 .
 ```
 
-## Step 2: Run Docker Container (Default Port 8000)
+## Step 2: Run Docker Container
 
 ```
-docker run -d -p 8000:8000 aswininigidaveer/book-crud-api:1.0
+docker run -d -p 8000:8000 aswininigidaaveer/book-crud-api:1.0
 ```
 
-Open in browser:
+## Step 3: Access Application
 
 ```
 http://localhost:8000/docs
@@ -95,65 +104,38 @@ http://localhost:8000/docs
 
 ---
 
-## Run on Custom Port (Example: 9000)
+# 📷 API OUTPUT (Swagger UI)
 
-```
-docker run -d -p 9000:9000 -e PORT=9000 aswininigidaveer/book-crud-api:1.0
-```
+After running the application successfully, the Swagger UI displays all CRUD endpoints as shown below:
 
-Open:
+### Available Endpoints:
 
-```
-http://localhost:9000/docs
-```
-
----
-
-# 🌐 PUSH IMAGE TO DOCKER HUB
-
-## Login
-
-```
-docker login
-```
-
-## Push Image
-
-```
-docker push aswininigidaveer/book-crud-api:1.0
-```
-
-## Pull Image Anywhere
-
-```
-docker pull aswininigidaveer/book-crud-api:1.0
-```
+* GET  /        → Root
+* GET  /books   → Get All Books
+* POST /books   → Create Book
+* GET  /books/{book_id} → Get Book by ID
+* PUT  /books/{book_id} → Update Book
+* DELETE /books/{book_id} → Delete Book
 
 ---
 
-# 📦 EXPORT DOCKER IMAGE (ALTERNATIVE SUBMISSION)
+## 📌 Swagger UI Screenshot
 
-## Save Image
+Below is the output of the running application:
 
-```
-docker save -o book-crud-api.tar aswininigidaveer/book-crud-api:1.0
-```
+![Swagger UI Output](Screenshot%202026-03-04%20091623.png)
 
-## Load Image
-
-```
-docker load -i book-crud-api.tar
-```
+> This screenshot shows successful execution of the FastAPI application with all CRUD endpoints visible.
 
 ---
 
-# 🔁 API ENDPOINTS
+# 🔁 API ENDPOINTS DETAILS
 
-## 1. Create Book
+## 1️⃣ Create Book
 
 POST /books
 
-Sample Body:
+Sample Request Body:
 
 ```
 {
@@ -163,15 +145,21 @@ Sample Body:
 }
 ```
 
-## 2. Get All Books
+---
+
+## 2️⃣ Get All Books
 
 GET /books
 
-## 3. Get Book by ID
+---
+
+## 3️⃣ Get Book by ID
 
 GET /books/1
 
-## 4. Update Book
+---
+
+## 4️⃣ Update Book
 
 PUT /books/1
 
@@ -185,15 +173,54 @@ Sample Body:
 }
 ```
 
-## 5. Delete Book
+---
+
+## 5️⃣ Delete Book
 
 DELETE /books/1
 
 ---
 
+# 🌐 PUSH TO GITHUB
+
+If remote repository already exists:
+
+```
+git pull origin main --allow-unrelated-histories
+git push origin main
+```
+
+Initial setup:
+
+```
+git init
+git add .
+git commit -m "Initial commit - CRUD microservice with Docker"
+git remote add origin https://github.com/yourusername/CURD_API.git
+git push -u origin main
+```
+
+---
+
+# 🌍 PUSH IMAGE TO DOCKER HUB
+
+Login:
+
+```
+docker login
+```
+
+Push Image:
+
+```
+docker push aswininigidaaveer/book-crud-api:1.0
+```
+
+---
+
 # 🔧 Useful Docker Commands
 
-List running containers:
+List containers:
 
 ```
 docker ps
@@ -219,50 +246,20 @@ docker logs <container_id>
 
 ---
 
-# 🌍 GITHUB COMMANDS
+# ✅ Final Output Verification
 
-Initialize repository:
-
-```
-git init
-git add .
-git commit -m "Initial commit - CRUD microservice with Docker"
-```
-
-Connect to GitHub:
-
-```
-git remote add origin https://github.com/yourusername/CURD_API.git
-```
-
-If repository already contains files:
-
-```
-git pull origin main --allow-unrelated-histories
-```
-
-Push to GitHub:
-
-```
-git push origin main
-```
-
----
-
-# ✅ Checklist
-
-✔ CRUD operations implemented
-✔ Proper folder structure
-✔ requirements.txt used
-✔ Environment variable configuration
-✔ Dockerfile created
-✔ Docker image built
-✔ Container running successfully
+✔ Application runs successfully
+✔ Swagger UI accessible
+✔ All CRUD endpoints working
+✔ Docker container running
 ✔ Image pushed to Docker Hub
-✔ README with complete execution steps included
+✔ Code pushed to GitHub
+✔ Screenshot of API output attached
 
 ---
 
 # 👩‍💻 Author
 
 Ashwini Gidaveer
+
+---
