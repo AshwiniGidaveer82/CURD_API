@@ -122,8 +122,7 @@ After running the application successfully, the Swagger UI displays all CRUD end
 ## 📌 Swagger UI Screenshot
 
 Below is the output of the running application:
-<img width="1913" height="1085" alt="Screenshot 2026-03-04 091623" src="https://github.com/user-attachments/assets/60a03f6c-d5c5-4f35-a3b6-6d0801e32d7e" />
-
+<img width="1909" height="606" alt="Screenshot 2026-02-16 130828" src="https://github.com/user-attachments/assets/08afa39a-0254-4769-b6b3-e7640fa2499b" />
 > This screenshot shows successful execution of the FastAPI application with all CRUD endpoints visible.
 
 ---
