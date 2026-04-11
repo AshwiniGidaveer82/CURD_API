@@ -74,8 +74,6 @@ python-microservice/
 ├── mongodb-service.yaml
 ├── python-deployment.yaml
 ├── python-service.yaml
-│
-├── Screenshot 2026-04-11 084641.png
 └── README.md
 ```
 
